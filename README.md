@@ -4,10 +4,10 @@ This bash script checks your odoo instance regularly through cron job. If the od
 ## 1. Install prerequisites
 This script requires screen. You can install screen with
 
-    `sudo apt-get install screen` 
+    sudo apt-get install screen 
 in Ubuntu, or 
 
-    `sudo yum install screen` 
+    sudo yum install screen
 in Fedora.
 
 ## 2. Set cron job
@@ -21,6 +21,7 @@ Within the open cron editor window
 
     @reboot /home/ubuntu/odoo-check.sh
     */3 * * * * /home/ubuntu/odoo-check.sh
+This will check your odoo every 3 minutes. You may change this value to suit your need and condition.
 
 ### Using Task Scheduler in Windows
 
