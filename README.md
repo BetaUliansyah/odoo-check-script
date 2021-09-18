@@ -23,6 +23,17 @@ Within the open cron editor window
     */3 * * * * /home/ubuntu/odoo-check.sh
 This will check your odoo every 3 minutes. You may change this value to suit your need and condition.
 
+### Set crontab every 10 seconds
+Since crontab doesn't have second, we need to delay our script with sleep command and create a serial processes. Following is the example:
+
+    * * * * * sh /odoo/odoo-check-script/odoo-check.sh
+    * * * * * (sleep 10; sh /odoo/odoo-check-script/odoo-check.sh)
+    * * * * * (sleep 20; sh /odoo/odoo-check-script/odoo-check.sh)
+    * * * * * (sleep 30; sh /odoo/odoo-check-script/odoo-check.sh)
+    * * * * * (sleep 40; sh /odoo/odoo-check-script/odoo-check.sh)
+    * * * * * (sleep 50; sh /odoo/odoo-check-script/odoo-check.sh)
+
+
 ### Using Task Scheduler in Windows
 
 This is a future feature.
